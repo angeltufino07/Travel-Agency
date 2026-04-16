@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+:root{
+ 
+    --blue-Header: rgb(0, 63, 136);
+    --winter-sky: rgb(253, 197, 0);
+    --black: rgb(12, 12, 12);
+    --white-nav: rgb(232, 232, 232);
+    --gray_input_email: rgb(198, 195, 195);
+    
+
+      --ff-spartan: 'League Spartan', sans-serif;
+      --fs-4: 1.8rem;
+      --fw-500: 500;
+     
+     
+      --section-padding: 60px;
+      --shadow-1: 0 6px 25px hsla(0, 0%, 0%, 0.1);
+      --radius-6: 6px;
+}
+
+
+
+.container_travel{
+    
+    width: 78vw;
+    border-radius: 20px;
+    display: flex;
+    
+    grid-template-columns: repeat(2, 1fr);
+    box-shadow: 1px 1px 50px 1px #acacac;
+}
+.img-container{
+    display: flex;
+    height: 100%;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: var( --winter-sky);
+    border-radius: 20px 0 0 20px;
+}
+.welcome-container{
+    width: 50%;
+    ///height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.welcome-container img{
+    width: 50%;
+    padding: 30px 10px;
+}
+
+
+.welcome-content hr{
+    border: none;
+    background-color: #6c64fd;
+    width: 30%;
+    height: 4px;
+    margin: 10px;
+    margin-left: 35%;
+}
+.welcome-content h2{
+    color: #424141;
+}
+p{
+    font-size: 1.2em;
+    color: #575757;
+    padding: 0 10px;
+}
+
+
+
+.img-container-file{
+
+    width: 70%;
+    padding: 2rem .3rem;
+}
+
+@media screen and (max-width: 900px){
+    h1{
+        font-size: 1.8em;
+    }
+    h2, h2, h4, h5{
+        font-size: 1.1em;
+    }
+    p{
+        font-size: 1em;
+    }
+    .img-container{
+        width: 50%;
+
+    }
+    .container{
+        width: 95vw;
+        background: none;
+        justify-content: center;
+    }
+  
+    .welcome-container{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .welcome-container img{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 600px){
+    .container{
+        border-radius: 5px;
+       //o box-shadow: none;
+    }
+    .welcome-container img{
+       width: 70%;
+    }
+  
+}
+.fadein{
+    opacity: 0;
+    transition: opacity 1.5s;
+    -webkit-transition: opacity 1.5s;
+}
+body.loaded .fadein{
+    opacity: 1;
+}
+
+
+
+    
+
+  ///////////////// MEDIA QUERIES   //////////////////
+  ///////////////////////////////////////////////////////
+
+    
+   
+  @media screen and (min-width:700px) {
+    .footerlinksContainer{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+  
+  
+  
+}

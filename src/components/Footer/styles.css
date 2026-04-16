@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+:root {
+  --blue-Header: rgb(0, 63, 136);
+  --winter-sky: rgb(253, 197, 0);
+  --black: rgb(12, 12, 12);
+  --white-nav: rgb(232, 232, 232);
+  --gray_input_email: rgb(198, 195, 195);
+  --ff-spartan: "League Spartan", sans-serif;
+  --fs-4: 1.8rem;
+  --fw-500: 500;
+  --section-padding: 60px;
+  --shadow-1: 0 6px 25px hsla(0, 0%, 0%, 0.1);
+  --radius-6: 6px;
+}
+
+.footer_Design {
+  max-width: 100%;
+  background-color: rgb(0, 63, 136);
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  justify-content: space-between;
+  margin-top: 50px;
+  border-radius: 6px;
+  color: rgb(229, 229, 229);
+  font-weight: 500;
+}
+
+.footer-list {
+  padding-inline: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.icons_medias {
+  padding-inline: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 80%;
+  padding-top: 15px;
+}
+.icons_medias img {
+  width: 50px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .icons_medias {
+    padding-inline: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    width: 80%;
+    padding-top: 15px;
+  }
+  .icons_medias img {
+    width: 20px;
+    cursor: pointer;
+  }
+}/*# sourceMappingURL=styles.css.map */

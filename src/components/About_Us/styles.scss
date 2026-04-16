@@ -1,0 +1,356 @@
+
+
+:root{
+ 
+    --blue-Header: rgb(0, 63, 136);
+    --winter-sky: rgb(253, 197, 0);
+    --black: rgb(12, 12, 12);
+    --white-nav: rgb(232, 232, 232);
+    --gray_input_email: rgb(198, 195, 195);
+    
+
+    
+      --ff-spartan: 'League Spartan', sans-serif;
+      --fs-4: 1.2rem;
+      --fw-500: 500;
+     
+     
+      --section-padding: 60px;
+      --shadow-1: 0 6px 25px hsla(0, 0%, 0%, 0.1);
+      --radius-6: 6px;
+
+
+
+    section{
+        width: 95%;
+       
+    
+        margin-top: 2em;
+    }
+
+    body{
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .gridSection{
+        background-color: var(--white-nav);
+        margin-top: 20%;
+        display: grid;
+        padding: 10px 20px;
+        align-items: center;
+        gap: 25px;
+        margin-bottom: 5em;
+    }
+    
+
+    
+    .sectionPic img{
+        width: 100%;
+    }
+    
+    p{
+        color: var(--lightgrey);
+    }
+    
+
+    
+}
+
+
+
+
+
+//////////////    The Company History    ////////////////////
+////////////////////////////////////////////////////////////
+
+
+
+.headline{
+    color: var(--black);
+    font-size: 3rem;
+    width: 100%;
+}
+
+.sub-headline{
+    color: var(--black);
+}
+
+
+.sectionPic{
+    order: 0;
+}
+
+.sectionDesc{
+    
+    order: 1;
+    margin-top: 1em;
+}
+
+.bouncepic img{
+    animation: fade-out-right 10s ease infinite;
+    
+}
+
+
+.aboutusDesc{
+    order: 0;
+}
+
+.statusContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.status h1{
+    color: var(--black);
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+.status h1 b{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.status p{
+    color: var(--black);
+    
+}
+
+
+
+
+
+@keyframes fade-out-right {
+    0% {
+    opacity: 1;
+    transform: translatex(0px);
+    
+    }
+    100%{
+    opacity: 0;
+    transform: translatex(40px);
+    
+    }}
+
+
+
+
+
+//////////////////// MISION VISION ///////////////////////
+/////////////////////////////////////////////////////////
+
+.services{
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 4em;
+}
+
+.aboutusimgContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    box-shadow: var(--shadow-1);
+}
+
+.aboutusimgContainer img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+.organizational{
+    margin-top: 1em;
+    display: grid;
+    gap: 50px; 
+}
+
+.organizational-mision{
+   display: flex;
+   align-items: flex-start;
+}
+
+.organizational-vision{
+    display: flex;
+    align-items: flex-start;
+ }
+
+
+
+.organizational-mision, .organizational-vision img{
+    margin-right: 1em;
+}
+
+.organizational-description h1{
+    margin-bottom: .5em;
+    font-size: 1.5rem;
+}
+
+.organizational-description p{
+   color: var(--black);
+}
+
+
+
+
+
+
+
+/////////////////////  MEET US  ////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+.video{
+    background-color: var(--white-nav);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: (.3fr, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
+}
+
+.video-header{
+font-size: 2.5rem;
+text-align: center;
+margin-bottom: .5em;
+font-weight: bold;
+}
+
+
+.video-grid{
+
+margin: 0 auto;
+padding-bottom: 30px;
+border-radius: var(--radius-6);
+}
+
+
+
+
+
+
+
+
+
+/////////////////////////  MEDIA QUERIES//////////////////
+//////////////////////////////////////////////////////////
+
+@media screen and (max-width:200px) {
+
+    .video-grid{
+
+        margin: 0 auto;
+    }
+
+}
+@media screen and (max-width:700px) {
+    video{
+        width: 80%;
+   
+    }
+
+    .video-grid{
+
+        margin: 0 auto;
+    }
+
+}
+
+
+@media screen and (min-width:700px) {
+    .footerlinksContainer{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    video{
+        width: 80%;
+    }
+}
+
+
+@media screen and (min-width:800px) {
+    .aboutusDesc{
+        order: 1;
+    }   
+
+    .statusContainer{
+        gap: 50px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .organizational{
+        grid-template-columns: 1fr 1fr;
+       gap: 20px;
+    }
+
+    .videoSection{
+        grid-template-columns: 1fr 3fr;
+      }
+
+    .video-header{
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: .5em;
+        font-weight: bold;
+        color: var(--black);
+    }
+    section{
+        width: 85%;
+    }   
+   
+  
+
+    .gridSection{
+        margin-top: 150px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .nav{
+        position: relative;
+        width: auto;
+        background-color: transparent;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-right: 5%;
+    }
+    .nav-link{
+          margin-right: 2em;
+    }
+    .sectionPic{
+        order: 1;
+    }
+    
+    .sectionDesc{
+        order: 0;
+    }  
+  
+    video{
+        width: 60%;
+    }
+      
+}
+
+@media screen and (min-width:1000px) {
+    .organizational{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .video-header{
+        font-size: 3.5rem;
+    }
+
+    .headline{
+        font-size: 4em;
+    }
+
+    video{
+        width: 700px;
+        height: 400px;
+    }
+
+}
+

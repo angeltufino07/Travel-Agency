@@ -1,0 +1,18 @@
+html {
+    font-family: var(--ff-spartan);
+    font-size: 10px;
+    scroll-behavior: smooth;
+    padding-inline: 15px;
+    margin: 0 auto;
+   
+  }
+
+  .RootMenu{
+    margin-top: 400PX;
+  }
+
+  @media screen and (min-width: 766px) {
+    .RootMenu{
+      margin-top: 140PX;
+    }
+  }
