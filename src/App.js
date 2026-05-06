@@ -5,16 +5,16 @@ import Travel from "./components/Travels";
 import About from "./components/About_Us";
 import { Route, Routes } from "react-router-dom";
 
-
 function App() {
   return (
     <div>
-     <Header />
-        <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route  path="/travels" element={<Travel />}/>
-          <Route path="/about" element={<About/>}/>
-        </Routes>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/travels" element={<Travel />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
