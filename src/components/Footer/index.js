@@ -10,7 +10,7 @@ import "./styles.css";
 
 const Footer = () => {
   return (
-    // FIXED: Removed unnecessary React Fragment — footer is the single root element
+    
     <footer className="footer_Design">
 
       <div className="footer-brand">
