@@ -35,7 +35,7 @@ const Home = () => {
                 src={Playa}
                 width="804"
                 height="643"
-                alt="Beach destination hero image"
+                alt="Beach destination"
                 className="w-100"
               />
             </div>
@@ -202,7 +202,7 @@ const Home = () => {
               <li>
                 <div className="about-card about-card-1">
                   <figure className="card-banner">
-                    <img className="user_pic" src={User1} alt="Profile photo of reviewer 1" />
+                    <img className="user_pic" src={User1} alt="Reviewer 1" />
                   </figure>
                   <div className="card-content">
                     {/* FIXED: Replaced <a href="#"> with <h3> — review titles are not links */}
@@ -220,7 +220,7 @@ const Home = () => {
               <li>
                 <div className="about-card about-card-2">
                   <figure className="card-banner">
-                    <img className="user_pic" src={User2} alt="Profile photo of reviewer 2" />
+                    <img className="user_pic" src={User2} alt="Reviewer 2" />
                   </figure>
                   <div className="card-content">
                     <h3 className="h3 card-title">Review 2</h3>
