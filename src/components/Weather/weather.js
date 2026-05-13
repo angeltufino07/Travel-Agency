@@ -91,7 +91,7 @@ const Weather = () => {
               alt={`${weatherData.weather[0].description} weather icon`}
             />
           )}
-          <p data-testid="custom-element">{weatherData.main.temp}°C</p>
+          <p data-testid="custom-element">{weatherData.main.temp}°F</p>
           <p>{weatherData.weather[0].description}</p>
         </div>
       )}
