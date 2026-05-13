@@ -1,12 +1,43 @@
 import { configureStore } from "@reduxjs/toolkit";
-import weatherSlice from "./slice";
+// FIXED: Removed unused store import
+import weatherReducer from "../slice";
 
+describe("Redux Store Configuration", () => {
+  let testStore;
 
-export const store = configureStore ({
-  reducer:{
-    weather:  weatherSlice,
-  }
+  // FIXED: beforeEach instead of beforeAll
+  beforeEach(() => {
+    testStore = configureStore({
+      reducer: {
+        weather: weatherReducer,
+      },
+    });
+  });
+
+  // FIXED: Wrote expected state directly instead of calling slice manually
+  it("should initialize store with correct weather state", () => {
+    expect(testStore.getState()).toEqual({
+      weather: {
+        weatherData: null,
+        loading: false,
+        error: null,
+      },
+    });
+  });
+
+  // FIXED: Added test for action dispatching
+  it("should update loading state after dispatching fetchWeatherStart", () => {
+    testStore.dispatch({ type: "weather/fetchWeatherStart" });
+    expect(testStore.getState().weather.loading).toBe(true);
+  });
+
+  // FIXED: Added test for error state
+  it("should update error state after dispatching fetchWeatherFailure", () => {
+    testStore.dispatch({
+      type: "weather/fetchWeatherFailure",
+      payload: "City not found",
+    });
+    expect(testStore.getState().weather.error).toBe("City not found");
+  });
+
 });
-
-
-

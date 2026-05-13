@@ -76,6 +76,21 @@ src/
 
 ---
 
+## 🧪 Testing
+
+```bash
+npm test
+```
+
+**20 tests across 7 suites:**
+- Footer component rendering
+- Header navigation links
+- App integration
+- Redux store configuration
+- Weather reducer — initial state, start, success, failure
+- Weather component interactions
+
+
 ## 👤 Author
 
 **Arturo Tufino**

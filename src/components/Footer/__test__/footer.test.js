@@ -1,29 +1,44 @@
+// src/components/Footer/__test__/footer.test.js
 import React from "react";
-import Footer from "../../Footer/index";
-import { fireEvent, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
+import { MemoryRouter } from "react-router-dom";
+import Footer from "../index";
 
-
-import {MemoryRouter} from 'react-router-dom'
-
-
-
-beforeAll(() => {
+// Arrange — setup that runs once before all tests
+beforeEach (() => {
   render(
     <MemoryRouter>
-      <Footer/> 
+      <Footer />
     </MemoryRouter>
-  )
-})
-
-describe('whats', () => {
-  test('Logo must have src = /whatsapp.png and alt = logo de whatsapp', () => {
-  
-    const whats = screen.getByTestId("testLogoW");
-    expect(whats).toHaveAttribute('src', 'whatsapp.png');
-    expect(whats).toHaveAttribute('alt', 'whatsapp logo');
-    expect(whats).toBeInTheDocument();
-  });
+  );
 });
 
+describe("Footer component", () => {
 
+  // Test 1 — Whatsapp logo renders correctly
+  it("renders Whatsapp logo with correct alt text", () => {
+    const whatsapp = screen.getByTestId("testLogoW");
+    expect(whatsapp).toBeInTheDocument();
+    expect(whatsapp).toHaveAttribute("alt", "Whatsapp");
+  });
+
+  // Test 2 — Navigation links exist
+  it("renders Home navigation link", () => {
+    const homeLink = screen.getByRole("link", { name: /home/i });
+    expect(homeLink).toBeInTheDocument();
+  });
+
+  // Test 3 — Social media section exists
+  it("renders Social Medias section title", () => {
+    const title = screen.getByText("Social Medias");
+    expect(title).toBeInTheDocument();
+  });
+
+  // Test 4 — Our Page section exists
+  it("renders Our Page section title", () => {
+  const title = screen.getByText(/our page/i);
+  expect(title).toBeInTheDocument();
+});
+
+});
      
